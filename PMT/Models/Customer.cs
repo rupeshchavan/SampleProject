@@ -12,7 +12,7 @@ namespace PMT.Models
         public string LastName { get; set; }
         public DateTime DOB { get; set; }
         public char Gender { get; set; }
-
+        public bool MaritalStatus {get; set;}
         public string PAN { get; set; }
         public string Adhar { get; set; }
         public string VoterID { get; set; }
