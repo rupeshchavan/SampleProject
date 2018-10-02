@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PMT.App_Start;
+using PMT.Authenticator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +15,7 @@ namespace PMT
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
         }
     }
 }

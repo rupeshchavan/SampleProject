@@ -1,0 +1,214 @@
+﻿@model PMT.Models.Customer
+
+@{
+    ViewBag.Title = "Customer Registration Form";
+    Layout = "~/Views/_LayoutDefault.cshtml";
+}
+
+
+
+<form method="post">
+    <div class="container-fluid">
+        <div class="card-header"> <h2>Registration Form</h2></div>
+        <div class="col-sm-4 col-lg-3 col-md-4">
+            <div class="form-group">
+                <label for="FirstName" class="col-form-label">FirstName</label>
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                @Html.ValidationMessage("FirstName", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="MiddleName" class="col-form-label">MiddleName</label>
+                @Html.TextBoxFor(m => m.MiddleName, new { @class = "form-control" })
+                @Html.ValidationMessage("MiddleName", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="LastName" class="col-form-label">LastName</label>
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                @Html.ValidationMessage("LastName", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="DOB" class="col-form-label">DOB</label>
+                @Html.TextBoxFor(m => m.DOB, new { @class = "form-control datepicker" })
+                @Html.ValidationMessage("DOB", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Gender" class="col-form-label">Gender : </label>
+                <label for="Gender" class="col-form-label">
+                    @Html.RadioButtonFor(m => m.Gender, "Male", new { @class = "btn btn-default" }) Male
+                </label>
+                <label for="Gender" class="col-form-label">
+                    @Html.RadioButtonFor(m => m.Gender, "Female", new { @class = "btn btn-default" }) Female
+                </label>
+                @Html.ValidationMessage("Gender", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="MaritalStatus" class="col-form-label">MaritalStatus</label>
+                <label for="Gender" class="col-form-label">
+                    @Html.RadioButtonFor(m => m.MaritalStatus, "Married", new { @class = "btn btn-default" }) Married
+                </label>
+                <label for="Gender" class="col-form-label">
+                    @Html.RadioButtonFor(m => m.MaritalStatus, "UnMarried", new { @class = "btn btn-default" }) UnMarried
+                </label>
+                @Html.ValidationMessage("MaritalStatus", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="PAN" class="col-form-label">PAN</label>
+                @Html.TextBoxFor(m => m.PAN, new { @class = "form-control", maxlength = 10 })
+                @Html.ValidationMessage("PAN", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="AadharNo " class="col-form-label">AadharNo </label>
+                @Html.TextBoxFor(m => m.AadharNo, new { @class = "form-control", @type = "number", maxlength = 12 })
+                @Html.ValidationMessage("AadharNo", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="VoterID" class="col-form-label">VoterID</label>
+                @Html.TextBoxFor(m => m.VoterID, new { @class = "form-control", maxlength = 10 })
+                @Html.ValidationMessage("VoterID", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Education" class="col-form-label">Education</label>
+                @Html.DropDownListFor(m => m.Education, new List<SelectListItem>() {new SelectListItem(){Text="------Select-----", Value="0"},
+                                                        new SelectListItem(){Text="Post Graduation", Value="Master"},
+                                                        new SelectListItem(){Text="Graduation", Value="Degree"},
+                                                        new SelectListItem(){Text="HSC", Value="XI"},
+                                                        new SelectListItem(){Text="SSC", Value="X"},
+                                                        }, new { @class = "form-control" })
+                @Html.ValidationMessage("Education", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="EmploymentType" class="col-form-label">EmploymentType</label>
+                @Html.DropDownListFor(m => m.EmploymentType, new List<SelectListItem>() {new SelectListItem(){Text="------Select-----", Value="0"},
+                                                             new SelectListItem(){Text="Self Employment", Value="3"},
+                                                             new SelectListItem(){Text="Non Salaried", Value="2"},
+                                                             new SelectListItem(){Text="Salaried", Value="1"},
+                                                             }, new { @class = "form-control" })
+                @Html.ValidationMessage("EmploymentType", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="WorkNature" class="col-form-label">WorkNature</label>
+                @Html.DropDownListFor(m => m.WorkNature, new List<SelectListItem>() {new SelectListItem(){Text="------Select-----", Value="0"},
+                                                             new SelectListItem(){Text="Business", Value="3"},
+                                                             new SelectListItem(){Text="Service", Value="2"},
+                                                             new SelectListItem(){Text="Office", Value="1"},
+                                                             }, new { @class = "form-control" })
+                @Html.ValidationMessage("WorkNature", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="CompanyName" class="col-form-label">CompanyName</label>
+                @Html.TextBoxFor(m => m.CompanyName, new { @class = "form-control", maxlength = 250 })
+                @Html.ValidationMessage("CompanyName", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Designation" class="col-form-label">Designation </label>
+                @Html.TextBoxFor(m => m.Designation, new { @class = "form-control", maxlength = 250 })
+                @Html.ValidationMessage("Designation", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="AnnualIncome" class="col-form-label">AnnualIncome </label>
+                @Html.TextBoxFor(m => m.AnnualIncome, new { @class = "form-control", @type = "number", maxlength = 7 })
+                @Html.ValidationMessage("AnnualIncome", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Address" class="col-form-label">Address </label>
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control", maxlength = 250 })
+                @Html.ValidationMessage("Address", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="State" class="col-form-label">State</label>
+                @Html.DropDownListFor(m => m.State, new List<SelectListItem>() {new SelectListItem(){Text="------Select-----", Value="0"},
+                                                             new SelectListItem(){Text="Business", Value="3"},
+                                                             new SelectListItem(){Text="Service", Value="2"},
+                                                             new SelectListItem(){Text="Office", Value="1"},
+                                                             }, new { @class = "form-control" })
+                @Html.ValidationMessage("State", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="City" class="col-form-label">City </label>
+                @Html.DropDownListFor(m => m.City, new List<SelectListItem>() {new SelectListItem(){Text="------Select-----", Value="0"},
+                                                             new SelectListItem(){Text="Business", Value="3"},
+                                                             new SelectListItem(){Text="Service", Value="2"},
+                                                             new SelectListItem(){Text="Office", Value="1"},
+                                                             }, new { @class = "form-control" })
+                @Html.ValidationMessage("City", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Pincode" class="col-form-label">Pincode </label>
+                @Html.TextBoxFor(m => m.Pincode, new { @class = "form-control", @type = "number", maxlength = 6 })
+                @Html.ValidationMessage("Pincode", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="MobileNo" class="col-form-label">MobileNo </label>
+                @Html.TextBoxFor(m => m.MobileNo, new { @class = "form-control", @type = "number", @maxlength = 10 })
+                @Html.ValidationMessage("MobileNo", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="EmailId" class="col-form-label">EmailId </label>
+                @Html.TextBoxFor(m => m.EmailId, new { @class = "form-control", maxlength = 250 })
+                @Html.ValidationMessage("EmailId", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit" />
+            </div>
+
+        </div>
+    </div>
+</form>
+<script>
+    $('.datepicker').datepicker({
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

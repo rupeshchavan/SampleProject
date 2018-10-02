@@ -1,0 +1,40 @@
+﻿body {
+    margin-right:5px;
+    margin-left:5px;
+}
+
+header {
+  overflow: hidden;
+  padding: 20px 10px;
+  height:100px;
+}
+
+header .top-first.row {
+    position: relative;
+}
+
+.row.row-main {
+    padding-left: 0;
+    padding-right: 0;
+    width: 1154px;
+}
+
+.logo-area {
+    position: absolute;
+    margin: 0;
+    top: 35px;
+}
+
+.RenderBody {
+    margin-top:10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    padding:5px;
+}

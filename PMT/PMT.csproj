@@ -81,19 +81,75 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="property\images\84-17-Alliance Jpg.jpg" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\ApplicationLevel.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Theme\css\bootstrap-datepicker.css" />
+    <Content Include="Theme\css\bootstrap-grid.css" />
+    <Content Include="Theme\css\bootstrap-grid.min.css" />
+    <Content Include="Theme\css\bootstrap-reboot.css" />
+    <Content Include="Theme\css\bootstrap-reboot.min.css" />
+    <Content Include="Theme\css\bootstrap.css" />
+    <Content Include="Theme\css\bootstrap.min.css" />
+    <Content Include="Theme\css\coming-soon.min.css" />
+    <Content Include="Theme\customcss\layout.css" />
+    <Content Include="Theme\Grey\GreayTheme.css" />
+    <Content Include="Theme\js\bootstrap-datepicker.min.js" />
+    <Content Include="Theme\js\bootstrap.bundle.js" />
+    <Content Include="Theme\js\bootstrap.bundle.min.js" />
+    <Content Include="Theme\js\bootstrap.js" />
+    <Content Include="Theme\js\bootstrap.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Authenticator\AuthAttribute.cs" />
+    <Compile Include="Controllers\AgentController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\BusinessModel.cs" />
+    <Compile Include="Models\ApplicationModel.cs" />
+    <Compile Include="Models\MasterModel.cs" />
+    <Compile Include="OfiiceBoy\clsSendMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Theme\css\bootstrap-grid.css.map" />
+    <Content Include="Theme\css\bootstrap-grid.min.css.map" />
+    <Content Include="Theme\css\bootstrap-reboot.css.map" />
+    <Content Include="Theme\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Theme\css\bootstrap.css.map" />
+    <Content Include="Theme\css\bootstrap.min.css.map" />
+    <Content Include="Theme\js\bootstrap.bundle.js.map" />
+    <Content Include="Theme\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Theme\js\bootstrap.js.map" />
+    <Content Include="Theme\js\bootstrap.min.js.map" />
+    <Content Include="Views\_LayoutDefault.cshtml" />
+    <Content Include="Views\Home\CommingSoon.cshtml" />
+    <None Include="Properties\PublishProfiles\LocalIIS.pubxml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="property\pdf\Eden Garden Broucher-1.pdf" />
+    <Content Include="property\pdf\N.P.- 84 -  17 %28FURNITURE LAYOUT%29-2.pdf" />
+    <Content Include="property\pdf\PALMS PPT.pdf" />
+    <Content Include="property\pdf\Sharamik brochure_12v %281%29.pdf" />
+    <Content Include="property\pdf\Sparsh brochure Qualcon Dreams %281%29.pdf" />
+    <Content Include="property\pdf\Sparsh brochure Qualcon Dreams.pdf" />
+    <Content Include="Views\Customer\Login.cshtml" />
+    <Content Include="Views\Customer\CustomerLanding.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Customer\Registration.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,7 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Agent\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

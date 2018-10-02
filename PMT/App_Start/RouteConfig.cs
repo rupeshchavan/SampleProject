@@ -14,10 +14,22 @@ namespace PMT
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "Home",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "CommingSoon", id = UrlParameter.Optional }
             );
+
+            //routes.MapRoute(
+            //    name: "AboutUs",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "Home", action = "AboutUs", id = UrlParameter.Optional }
+            //);
+
+            //routes.MapRoute(
+            //    name:"Customer",
+            //    url : "{Controller}/{action}/{id}",
+            //    defaults: new { controller="Customer", action="Login", id= UrlParameter.Optional}
+            //    );
         }
     }
 }
